@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\fw">
+      <UniqueIdentifier>{ec1c2122-a539-4569-b002-5696dad8e499}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fw">
+      <UniqueIdentifier>{79ec3cf8-8565-43b1-a34a-8d191a45c4a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes">
+      <UniqueIdentifier>{b28feba4-e23a-4ad3-baba-60898356723b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{e80b84ea-1371-4c00-8b58-e85e3b11ee15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Object">
+      <UniqueIdentifier>{0f420f93-628e-4085-8909-8c5cb95d072e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object">
+      <UniqueIdentifier>{09fde7b4-8372-4395-818b-4f8ac74fc89b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fw\image">
+      <UniqueIdentifier>{648db039-7a27-4f25-bf15-5ea9df625769}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fw\image">
+      <UniqueIdentifier>{42522d09-8d0d-4050-afb7-cbdb2166e5c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{a0ee2211-98c9-430d-80bb-803a287c8686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{cbbaa44a-0591-48ec-85fc-88d54274a1c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\Player">
+      <UniqueIdentifier>{8d3fd531-1570-4523-840e-76947c9202e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Object\Player">
+      <UniqueIdentifier>{1ee65ced-4cdd-4695-a2b4-d9abd4194f4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Object\Enemy">
+      <UniqueIdentifier>{bfc0c76d-d0a2-4adc-86b0-5627aa8acefc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Object\Boss">
+      <UniqueIdentifier>{610baf40-0371-49fc-9be8-d7f9ad3dd04e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Object\Item">
+      <UniqueIdentifier>{f1fc65b6-e101-4b2e-8848-921050d6d602}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\Enemy">
+      <UniqueIdentifier>{1273534d-b700-49eb-8e63-7e4d696d281f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\Boss">
+      <UniqueIdentifier>{d1ce8955-d735-44bd-804e-d89208d8cd37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\Item">
+      <UniqueIdentifier>{f8f788fa-8923-4d35-b556-f00b6c4948ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Object\Ground">
+      <UniqueIdentifier>{e6fe8f50-efb2-4662-b00b-f5a1c6883b9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Object\Ground">
+      <UniqueIdentifier>{ee324d51-7997-4333-a01f-8bfd822f060e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QuadTree">
+      <UniqueIdentifier>{91e5f04a-b080-40f9-b255-91a5726d36a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\QuadTree">
+      <UniqueIdentifier>{eb5fb518-90c7-49d6-a9cc-075a7454b61c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fwconfig.h">
+      <Filter>Header Files\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="fwKeyboard.h">
+      <Filter>Header Files\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="fwmacro.h">
+      <Filter>Header Files\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="fwFPSController.h">
+      <Filter>Header Files\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="IGScene.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="fwTexture.h">
+      <Filter>Header Files\fw\image</Filter>
+    </ClInclude>
+    <ClInclude Include="fwSprite.h">
+      <Filter>Header Files\fw\image</Filter>
+    </ClInclude>
+    <ClInclude Include="fwAnimation.h">
+      <Filter>Header Files\fw\image</Filter>
+    </ClInclude>
+    <ClInclude Include="fwloopGame.h">
+      <Filter>Header Files\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="fwWindows.h">
+      <Filter>Header Files\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicObject.h">
+      <Filter>Header Files\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources.h">
+      <Filter>Header Files\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundingBox.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="MainObject.h">
+      <Filter>Header Files\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="fwCamera.h">
+      <Filter>Header Files\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>Header Files\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticObject.h">
+      <Filter>Header Files\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Bat.h">
+      <Filter>Header Files\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Death.h">
+      <Filter>Header Files\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Dog.h">
+      <Filter>Header Files\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="BossBat.h">
+      <Filter>Header Files\Object\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="BigHeart.h">
+      <Filter>Header Files\Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="SmallHeart.h">
+      <Filter>Header Files\Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Food.h">
+      <Filter>Header Files\Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Creese.h">
+      <Filter>Header Files\Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Whip.h">
+      <Filter>Header Files\Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="BigFire.h">
+      <Filter>Header Files\Object\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="SmallFire.h">
+      <Filter>Header Files\Object\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Door1.h">
+      <Filter>Header Files\Object\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Door2.h">
+      <Filter>Header Files\Object\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Gate1.h">
+      <Filter>Header Files\Object\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Gate2.h">
+      <Filter>Header Files\Object\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="EnergyWater.h">
+      <Filter>Header Files\Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Brick.h">
+      <Filter>Header Files\Object\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadTree.h">
+      <Filter>Header Files\QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Simon.h">
+      <Filter>Header Files\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files\Object\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Left.h">
+      <Filter>Header Files\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Right.h">
+      <Filter>Header Files\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Ball.h">
+      <Filter>Header Files\Object\Item</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fwconfig.cpp">
+      <Filter>Source Files\fw</Filter>
+    </ClCompile>
+    <ClCompile Include="fwKeyboard.cpp">
+      <Filter>Source Files\fw</Filter>
+    </ClCompile>
+    <ClCompile Include="fwFPSController.cpp">
+      <Filter>Source Files\fw</Filter>
+    </ClCompile>
+    <ClCompile Include="IGScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="fwTexture.cpp">
+      <Filter>Source Files\fw\image</Filter>
+    </ClCompile>
+    <ClCompile Include="fwSprite.cpp">
+      <Filter>Source Files\fw\image</Filter>
+    </ClCompile>
+    <ClCompile Include="fwAnimation.cpp">
+      <Filter>Source Files\fw\image</Filter>
+    </ClCompile>
+    <ClCompile Include="fwloopGame.cpp">
+      <Filter>Source Files\fw</Filter>
+    </ClCompile>
+    <ClCompile Include="fwWindows.cpp">
+      <Filter>Source Files\fw</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticObject.cpp">
+      <Filter>Source Files\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicObject.cpp">
+      <Filter>Source Files\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources.cpp">
+      <Filter>Source Files\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="MainObject.cpp">
+      <Filter>Source Files\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="fwCamera.cpp">
+      <Filter>Source Files\fw</Filter>
+    </ClCompile>
+    <ClCompile Include="mainGame.cpp">
+      <Filter>Source Files\fw</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>Source Files\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Bat.cpp">
+      <Filter>Source Files\Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Death.cpp">
+      <Filter>Source Files\Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Dog.cpp">
+      <Filter>Source Files\Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="BossBat.cpp">
+      <Filter>Source Files\Object\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="BigHeart.cpp">
+      <Filter>Source Files\Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallHeart.cpp">
+      <Filter>Source Files\Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Food.cpp">
+      <Filter>Source Files\Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="BigFire.cpp">
+      <Filter>Source Files\Object\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallFire.cpp">
+      <Filter>Source Files\Object\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Door1.cpp">
+      <Filter>Source Files\Object\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Gate1.cpp">
+      <Filter>Source Files\Object\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Gate2.cpp">
+      <Filter>Source Files\Object\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="EnergyWater.cpp">
+      <Filter>Source Files\Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Whip.cpp">
+      <Filter>Source Files\Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Creese.cpp">
+      <Filter>Source Files\Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Brick.cpp">
+      <Filter>Source Files\Object\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Door2.cpp">
+      <Filter>Source Files\Object\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadTree.cpp">
+      <Filter>Source Files\QuadTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Simon.cpp">
+      <Filter>Source Files\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Left.cpp">
+      <Filter>Source Files\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Right.cpp">
+      <Filter>Source Files\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Ball.cpp">
+      <Filter>Source Files\Object\Item</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
