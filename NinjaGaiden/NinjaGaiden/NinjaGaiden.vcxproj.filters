@@ -192,9 +192,6 @@
     <ClInclude Include="Simon.h">
       <Filter>Header Files\Object\Player</Filter>
     </ClInclude>
-    <ClInclude Include="Map.h">
-      <Filter>Header Files\Object\Ground</Filter>
-    </ClInclude>
     <ClInclude Include="Left.h">
       <Filter>Header Files\Object\Player</Filter>
     </ClInclude>
@@ -203,6 +200,9 @@
     </ClInclude>
     <ClInclude Include="Ball.h">
       <Filter>Header Files\Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files\Object\Ground</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -322,6 +322,9 @@
     </ClCompile>
     <ClCompile Include="Ball.cpp">
       <Filter>Source Files\Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files\Object\Ground</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

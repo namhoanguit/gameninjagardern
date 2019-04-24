@@ -28,7 +28,7 @@
 #include "Left.h"
 #include "Right.h"
 
-
+#include "Map.h"
 class IGScene
 {
 	Simon* simon;
@@ -67,7 +67,7 @@ class IGScene
 	Gate1 * gate1;
 	Gate2 * gate2;
 	
-
+	Map* map;
 
 	SweepAABB m_sweepAABB;
 

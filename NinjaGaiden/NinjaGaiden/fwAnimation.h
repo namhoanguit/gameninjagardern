@@ -30,6 +30,7 @@ public:
 
 	DWORD getTimeLine(){ return m_TimeLine; }
 	void setindex(int tu,int den);
+	void setCurrentIndex(int index);
 	void drawCurrentFrame(D3DXVECTOR3 pos,
 		const DrawCenter&	drawCenter = DrawCenter::CENTER,
 		D3DXVECTOR2			scale = SCALE_NO,

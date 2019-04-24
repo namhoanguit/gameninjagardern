@@ -130,12 +130,12 @@ void IGScene::updateCollide(DWORD deltatime)
 }
 void IGScene::draw()
 {
-	
+	map->DrawMap(fwCAMERA_INSTANCE, 1);
 	//left->draw();
 	if (m_visibleScene)
 	{
 		
-		m_sceneMap->drawFrame(m_posCamera);
+		//m_sceneMap->drawFrame(m_posCamera);
 		simon->draw();
 	}
 	else
@@ -169,6 +169,8 @@ void IGScene::InitMap()
 	ball = new Ball();
 	m_visibleScene = true;
 
+	map = new Map(1);
+
 	QuadTree::m_vectorEntitiesEnemy.clear();
 	QuadTree::m_vectorEntitiesTerrain.clear();
 	QuadTree::m_maxlevelEnemy = QuadTree::m_maxlevelTerrain = 0;
@@ -184,8 +186,8 @@ void IGScene::InitMap()
 	m_sceneMap->setPosInTexture(D3DXVECTOR3(0, 0, 0));
 
 
-	m_posCamera.x = m_sceneMap->getPosInTexture().x;
-	m_posCamera.y = m_sizeQT - m_sceneMap->getPosInTexture().y - RESOLUTION_HEIGHT;
+	m_posCamera.x =0;
+	m_posCamera.y = -200;
 	fwCAMERA_INSTANCE->setPossition(m_posCamera);
 	if (simon->GetCam() == true)
 		simon->setPosition(D3DXVECTOR3(fwCAMERA_INSTANCE->getPossition().x + RESOLUTION_WIDTH / 2

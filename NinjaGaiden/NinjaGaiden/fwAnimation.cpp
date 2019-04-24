@@ -24,7 +24,10 @@ void fwAnimation::generateNextIndexHorizontal()
 	}
 }
 
-
+void fwAnimation::setCurrentIndex(int index)
+{
+	m_CurrentIndex = index;
+}
 void fwAnimation::setindex(int tu, int den)
 {
 	if (((GetTickCount() - m_TimeLine) >= m_TimeToNextSprite))
