@@ -28,7 +28,14 @@
 #include "Left.h"
 #include "Right.h"
 
+
+
+#include "BanShee.h"
+#include "SwordMan.h"
 #include "Map.h"
+#include "Runner.h"
+#include "MachineGun.h"
+#include "Rocket.h"
 class IGScene
 {
 	Simon* simon;
@@ -37,12 +44,20 @@ class IGScene
 
 	// Enemy
 	Test * box;
-	Dog *dog;
+	
 	Bat *bat;
 	Death * death;
 	Left * left;
 	
 	Ball * ball;
+	// Enemy - ninja garden
+
+	BanShee * banshee;
+	Dog *dog;
+	SwordMan * swordman;
+	Runner * runner;
+	Rocket * rocket;
+	MachineGun * gun;
 
 	// Boss
 	BossBat* boss_bat;

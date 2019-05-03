@@ -1,20 +1,20 @@
-﻿#include "Dog.h"
+﻿#include "BanShee.h"
 
-#define PATH_MANOBJ "res\\images\\enemy\\dog.bmp"
+#define PATH_MANOBJ "res\\images\\enemy\\banshee.bmp"
 #define VELOCITY 50
 
-Dog::Dog()
+BanShee::BanShee()
 {
 	m_Id = idPLAYER;
-	m_Pos = D3DXVECTOR3(200, 0, 0);
+	m_Pos = D3DXVECTOR3(100, 0, 0);
 
 	m_texture = new fwTexture(PATH_MANOBJ);
-	m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0), 2, 2, 32.5, 15);
+	m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0), 4, 4, 33, 43);
 	m_animation = new fwAnimation(m_sprite, 500);// 500 là thời gian chuyển đổi giữa 2 frame liên tiếp, càng lớn càng chậm
 
 }
 
-Dog::~Dog()
+BanShee::~BanShee()
 {
 	delete m_texture, m_sprite, m_animation;
 	m_texture = nullptr;
@@ -24,16 +24,16 @@ Dog::~Dog()
 
 
 
-void Dog::update(DWORD deltatime)
+void BanShee::update(DWORD deltatime)
 {
 	//updateKeyBoard(deltatime);
 	updateTime(deltatime);
 }
 
 
-void Dog::updateTime(DWORD deltatime)
+void BanShee::updateTime(DWORD deltatime)
 {
-	if (m_Pos.x >= 200)
+	if (m_Pos.x >= 100)
 	{
 		m_Pos.x += VELOCITY * 16 / 1000;
 	}
@@ -42,13 +42,13 @@ void Dog::updateTime(DWORD deltatime)
 	{
 		m_Pos.x -= VELOCITY * 16 / 1000;
 	}
-
+	 
 
 }
 
 
 
-void Dog::updateCollide(SweepAABB col, DWORD deltatime)
+void BanShee::updateCollide(SweepAABB col, DWORD deltatime)
 {
 	float colTime = 1.0f;
 
@@ -87,14 +87,14 @@ void Dog::updateCollide(SweepAABB col, DWORD deltatime)
 	m_Pos.y += m_bb.m_vy*colTime*deltatime / 1000;
 }
 
-void Dog::draw()
+void BanShee::draw()
 {
 
 	if (m_Pos.x>0)
 	{
-
+		
 		m_animation->drawCurrentFrame(m_Pos, BOTTOMLEFT, SCALE_A(1), D3DCOLOR_XRGB(255, 255, 255), TRANSLATE_NO, ANGLE_NO, true);
-
+		
 	}
 	else
 	{

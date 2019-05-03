@@ -6,15 +6,15 @@
 #include "Collision.h"
 
 
-class Dog : public DynamicObject
+class BanShee : public DynamicObject
 {
 	fwAnimation* m_animation;
 	fwTexture* m_texture;
 	fwSprite* m_sprite;
 
 public:
-	Dog();
-	~Dog();
+	BanShee();
+	~BanShee();
 
 	void update(DWORD deltatime);
 

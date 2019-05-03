@@ -1,20 +1,20 @@
-﻿#include "Dog.h"
+﻿#include "SwordMan.h"
 
-#define PATH_MANOBJ "res\\images\\enemy\\dog.bmp"
+#define PATH_MANOBJ "res\\images\\enemy\\SwordMan.bmp"
 #define VELOCITY 50
 
-Dog::Dog()
+SwordMan::SwordMan()
 {
 	m_Id = idPLAYER;
-	m_Pos = D3DXVECTOR3(200, 0, 0);
+	m_Pos = D3DXVECTOR3(100, -100, 0);
 
 	m_texture = new fwTexture(PATH_MANOBJ);
-	m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0), 2, 2, 32.5, 15);
+	m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0), 3, 3, 27.33, 40);
 	m_animation = new fwAnimation(m_sprite, 500);// 500 là thời gian chuyển đổi giữa 2 frame liên tiếp, càng lớn càng chậm
 
 }
 
-Dog::~Dog()
+SwordMan::~SwordMan()
 {
 	delete m_texture, m_sprite, m_animation;
 	m_texture = nullptr;
@@ -24,21 +24,21 @@ Dog::~Dog()
 
 
 
-void Dog::update(DWORD deltatime)
+void SwordMan::update(DWORD deltatime)
 {
 	//updateKeyBoard(deltatime);
 	updateTime(deltatime);
 }
 
 
-void Dog::updateTime(DWORD deltatime)
+void SwordMan::updateTime(DWORD deltatime)
 {
 	if (m_Pos.x >= 200)
 	{
 		m_Pos.x += VELOCITY * 16 / 1000;
 	}
 	else
-	if (m_Pos.x >= 200)
+	if (m_Pos.x >= 300)
 	{
 		m_Pos.x -= VELOCITY * 16 / 1000;
 	}
@@ -48,7 +48,7 @@ void Dog::updateTime(DWORD deltatime)
 
 
 
-void Dog::updateCollide(SweepAABB col, DWORD deltatime)
+void SwordMan::updateCollide(SweepAABB col, DWORD deltatime)
 {
 	float colTime = 1.0f;
 
@@ -87,7 +87,7 @@ void Dog::updateCollide(SweepAABB col, DWORD deltatime)
 	m_Pos.y += m_bb.m_vy*colTime*deltatime / 1000;
 }
 
-void Dog::draw()
+void SwordMan::draw()
 {
 
 	if (m_Pos.x>0)

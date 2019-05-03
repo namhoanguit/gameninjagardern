@@ -5,9 +5,18 @@ IGScene::IGScene()
 	//m_mainobj = new MainObject();
 	//box = new Test(BoundingBox(0, 10, 500, 5));
 
-	//// enemy
-	//dog = new  Dog();
-	//bat = new Bat();
+
+
+	
+
+		//// enemy
+	banshee = new BanShee();
+	dog = new  Dog();
+	swordman = new SwordMan();
+	runner = new Runner();
+	rocket = new Rocket();
+	gun = new MachineGun();
+		//bat = new Bat();
 	//death = new Death();
 
 	//// Boss
@@ -20,6 +29,12 @@ IGScene::IGScene()
 	//left = new Left();
 	InitMap();
 
+
+
+
+
+
+
 }
 
 IGScene::~IGScene()
@@ -27,15 +42,24 @@ IGScene::~IGScene()
 	delete simon; box; ball; left;
 	delete dog,bat,death,boss_bat;
 	delete food,bigheart,smallheart;
+
+
+	// - ninja gaiden
+	delete banshee,swordman,gun,rocket,runner;
+
 }
 
 void IGScene::update(DWORD deltatime)
 {
 	//m_mainobj->update(deltatime);
-	///*dog->update(deltatime);
+
 	//bat->update(deltatime);*/
 	//death->update(deltatime);
 	////boss_bat->update(deltatime);
+
+
+
+
 
 	//// enemy
 	////food->update(deltatime);
@@ -86,6 +110,20 @@ void IGScene::update(DWORD deltatime)
 
 	
 	//left->update(deltatime);
+
+
+
+	// enemy
+
+	banshee->update(deltatime);
+	dog->update(deltatime);
+
+	runner->update(deltatime);
+	rocket->update(deltatime);
+	gun->update(deltatime);
+	swordman->update(deltatime);
+
+
 	ball->update(deltatime);
 	updateQT();
 
@@ -98,9 +136,11 @@ void IGScene::update(DWORD deltatime)
 void IGScene::updateKeyBoard(DWORD deltatime)
 {
 
+	
 	simon->update(deltatime);
 	
 	ball->update(deltatime);
+
 	 
 	if (fwGET_KEY(DIK_V) == KEY_PRESS)
 		m_visibleScene = m_visibleScene ? false : true;
@@ -130,8 +170,8 @@ void IGScene::updateCollide(DWORD deltatime)
 }
 void IGScene::draw()
 {
-	map->DrawMap(fwCAMERA_INSTANCE, 1);
-	//left->draw();
+	//map->DrawMap(fwCAMERA_INSTANCE, 1);
+	
 	if (m_visibleScene)
 	{
 		
@@ -147,7 +187,16 @@ void IGScene::draw()
 		simon->drawBoundingBox(COLOR_RED);
 	}
 	ball->draw();
-	
+
+
+
+	// nam thêm
+	banshee->draw();
+	dog->draw();
+	swordman->draw();
+	runner->draw();
+	rocket->draw();
+	gun->draw();
 	ball->drawBoundingBox(COLOR_RED);
 }
 
@@ -167,6 +216,10 @@ void IGScene::InitMap()
 {
 	simon = new Simon();
 	ball = new Ball();
+
+	
+	
+	//
 	m_visibleScene = true;
 
 	map = new Map(1);
