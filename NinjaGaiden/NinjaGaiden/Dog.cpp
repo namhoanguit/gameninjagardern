@@ -98,7 +98,7 @@ void Dog::draw()
 	}
 	else
 	{
-		m_animation->drawCurrentFrame(m_Pos, BOTTOMLEFT, SCALE_XY(-1, 1), D3DCOLOR_XRGB(255, 255, 255), TRANSLATE_NO, ANGLE_NO, true);
+		m_animation->drawCurrentFrame(m_Pos, BOTTOMLEFT, SCALE_XY(-1, 1), D3DCOLOR_XRGB(255, 0, 255), TRANSLATE_NO, ANGLE_NO, true);
 	}
 	m_animation->generateNextIndexHorizontal(); //tự động tính toán sau bao lâu sẽ tự động đến frame kế tiếp.
 	//m_bb.m_vx = m_bb.m_vy = 0;

@@ -186,9 +186,6 @@
     <ClInclude Include="QuadTree.h">
       <Filter>Header Files\QuadTree</Filter>
     </ClInclude>
-    <ClInclude Include="Simon.h">
-      <Filter>Header Files\Object\Player</Filter>
-    </ClInclude>
     <ClInclude Include="Left.h">
       <Filter>Header Files\Object\Player</Filter>
     </ClInclude>
@@ -227,6 +224,9 @@
     </ClInclude>
     <ClInclude Include="Bird.h">
       <Filter>Header Files\Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Hayabusa.h">
+      <Filter>Header Files\Object\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -335,9 +335,6 @@
     <ClCompile Include="QuadTree.cpp">
       <Filter>Source Files\QuadTree</Filter>
     </ClCompile>
-    <ClCompile Include="Simon.cpp">
-      <Filter>Source Files\Object\Player</Filter>
-    </ClCompile>
     <ClCompile Include="Left.cpp">
       <Filter>Source Files\Object\Player</Filter>
     </ClCompile>
@@ -373,6 +370,9 @@
     </ClCompile>
     <ClCompile Include="Butterfly.cpp">
       <Filter>Source Files\Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Hayabusa.cpp">
+      <Filter>Source Files\Object\Player</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

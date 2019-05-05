@@ -40,7 +40,7 @@ IGScene::IGScene()
 
 IGScene::~IGScene()
 {
-	delete simon; box; ball; left;
+	delete hayabusa; box; ball; left;
 	delete dog,bat,death,boss_bat;
 	delete food,bigheart,smallheart;
 
@@ -147,7 +147,7 @@ void IGScene::updateKeyBoard(DWORD deltatime)
 {
 
 	
-	simon->update(deltatime);
+	hayabusa->update(deltatime);
 	
 	ball->update(deltatime);
 
@@ -162,7 +162,7 @@ void IGScene::updateCollide(DWORD deltatime)
 
 	for (i = 0; i < m_main.size(); i++)
 	{
-		tempCol.checkCollisionBySweeepAABB(simon, m_main.at(i), deltatime);
+		tempCol.checkCollisionBySweeepAABB(hayabusa, m_main.at(i), deltatime);
 
 		if (tempCol.m_colDirection == NO)continue;
 
@@ -176,7 +176,7 @@ void IGScene::updateCollide(DWORD deltatime)
 	}
 
 
-	simon->updateCollide(nearestCol, deltatime);
+	hayabusa->updateCollide(nearestCol, deltatime);
 }
 void IGScene::draw()
 {
@@ -186,15 +186,15 @@ void IGScene::draw()
 	{
 		
 		//m_sceneMap->drawFrame(m_posCamera);
-		simon->draw();
+		hayabusa->draw();
 	}
 	else
 	{
 		for (int i = 0; i < m_main.size(); i++)
 			m_main.at(i)->draw();
 		
-		simon->draw();
-		simon->drawBoundingBox(COLOR_RED);
+		hayabusa->draw();
+		hayabusa->drawBoundingBox(COLOR_RED);
 	}
 	ball->draw();
 
@@ -220,8 +220,8 @@ void IGScene::draw()
 
 void IGScene::updateScene(DWORD deltatime)
 {
-	if (simon->GetCam() == true)
-		m_posCamera.x += simon->getVX()*deltatime / 1000;
+	if (hayabusa->GetCam() == true)
+		m_posCamera.x += hayabusa->getVX()*deltatime / 1000;
 	//m_posCamera.y += m_mainobj->getVY()*deltatime / 1000;
 	fwCAMERA_INSTANCE->setPossition(m_posCamera);
 	m_sceneMap->setPosInTexture(D3DXVECTOR3(m_posCamera.x,
@@ -230,7 +230,7 @@ void IGScene::updateScene(DWORD deltatime)
 
 void IGScene::InitMap()
 {
-	simon = new Simon();
+	hayabusa = new Hayabusa();
 	ball = new Ball();
 
 	
@@ -258,8 +258,8 @@ void IGScene::InitMap()
 	m_posCamera.x =0;
 	m_posCamera.y = -200;
 	fwCAMERA_INSTANCE->setPossition(m_posCamera);
-	if (simon->GetCam() == true)
-		simon->setPosition(D3DXVECTOR3(fwCAMERA_INSTANCE->getPossition().x + RESOLUTION_WIDTH / 2
+	if (hayabusa->GetCam() == true)
+		hayabusa->setPosition(D3DXVECTOR3(fwCAMERA_INSTANCE->getPossition().x + RESOLUTION_WIDTH / 2
 		, fwCAMERA_INSTANCE->getPossition().y + RESOLUTION_HEIGHT / 2, 0));
 
 }

@@ -4,7 +4,7 @@
 #include <d3d9.h>
 #include <d3dx9.h>
 #include "MainObject.h"
-#include "Simon.h"
+#include "Hayabusa.h"
 #include "fwCamera.h"
 #include "Dog.h"
 #include "Bat.h"
@@ -41,7 +41,7 @@
 #include "Bird.h"
 class IGScene
 {
-	Simon* simon;
+	Hayabusa* hayabusa;
 
 	D3DXVECTOR3 m_posCamera;
 
