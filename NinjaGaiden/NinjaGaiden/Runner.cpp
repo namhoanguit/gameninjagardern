@@ -6,7 +6,7 @@
 Runner::Runner()
 {
 	m_Id = idPLAYER;
-	m_Pos = D3DXVECTOR3(100, 0, 0);
+	m_Pos = D3DXVECTOR3(50, 0, 0);
 
 	m_texture = new fwTexture(PATH_MANOBJ);
 	m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0),2,2, 18.5, 32);
@@ -33,7 +33,7 @@ void Runner::update(DWORD deltatime)
 
 void Runner::updateTime(DWORD deltatime)
 {
-	if (m_Pos.x >= 100)
+	if (m_Pos.x >= 50)
 	{
 		m_Pos.x += VELOCITY * 16 / 1000;
 	}

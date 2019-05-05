@@ -22,11 +22,12 @@ IGScene::IGScene()
 	//// Boss
 	//boss_bat = new BossBat();
 	//// item
-	//food = new Food();
-	//bigheart = new BigHeart();
-	//smallheart = new SmallHeart();
-	
-	//left = new Left();
+	bird = new Bird();	// con chim
+	butterfly = new Butterfly();	// con buom
+
+
+
+
 	InitMap();
 
 
@@ -46,6 +47,9 @@ IGScene::~IGScene()
 
 	// - ninja gaiden
 	delete banshee,swordman,gun,rocket,runner;
+
+	// item
+	delete butterfly, bird;
 
 }
 
@@ -124,6 +128,12 @@ void IGScene::update(DWORD deltatime)
 	swordman->update(deltatime);
 
 
+
+
+	// item
+
+	butterfly->update(deltatime);
+	bird->update(deltatime);
 	ball->update(deltatime);
 	updateQT();
 
@@ -170,7 +180,7 @@ void IGScene::updateCollide(DWORD deltatime)
 }
 void IGScene::draw()
 {
-	//map->DrawMap(fwCAMERA_INSTANCE, 1);
+	map->DrawMap(fwCAMERA_INSTANCE, 1);
 	
 	if (m_visibleScene)
 	{
@@ -197,6 +207,12 @@ void IGScene::draw()
 	runner->draw();
 	rocket->draw();
 	gun->draw();
+
+
+	//item
+	bird->draw();
+	butterfly->draw();
+
 	ball->drawBoundingBox(COLOR_RED);
 }
 

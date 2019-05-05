@@ -36,6 +36,9 @@
 #include "Runner.h"
 #include "MachineGun.h"
 #include "Rocket.h"
+
+#include "Butterfly.h"
+#include "Bird.h"
 class IGScene
 {
 	Simon* simon;
@@ -63,6 +66,10 @@ class IGScene
 	BossBat* boss_bat;
 
 	// Item
+	// nam thêm
+	Butterfly *butterfly;
+	Bird *bird;
+
 
 	Creese * cresse; // item dao gam
 	Whip * whip; // item doi da

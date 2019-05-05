@@ -1,20 +1,20 @@
-﻿#include "MachineGun.h"
+﻿#include "Bird.h"
 
-#define PATH_MANOBJ "res\\images\\enemy\Gun.bmp"
+#define PATH_MANOBJ "res\\images\\item\\chim1.bmp"
 #define VELOCITY 50
 
-MachineGun::MachineGun()
+Bird::Bird()
 {
 	m_Id = idPLAYER;
-	m_Pos = D3DXVECTOR3(400, 0, 0);
+	m_Pos = D3DXVECTOR3(300, 0, 0);
 
 	m_texture = new fwTexture(PATH_MANOBJ);
-	m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0),5 ,5, 25.2, 32);
+	m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0), 2, 2, 18.5, 17);
 	m_animation = new fwAnimation(m_sprite, 500);// 500 là thời gian chuyển đổi giữa 2 frame liên tiếp, càng lớn càng chậm
 
 }
 
-MachineGun::~MachineGun()
+Bird::~Bird()
 {
 	delete m_texture, m_sprite, m_animation;
 	m_texture = nullptr;
@@ -24,31 +24,32 @@ MachineGun::~MachineGun()
 
 
 
-void MachineGun::update(DWORD deltatime)
+void Bird::update(DWORD deltatime)
 {
 	//updateKeyBoard(deltatime);
 	updateTime(deltatime);
 }
 
 
-void MachineGun::updateTime(DWORD deltatime)
+void Bird::updateTime(DWORD deltatime)
 {
-	if (m_Pos.x >= 400)
+	if (m_Pos.x >= 300)
 	{
 		m_Pos.x += VELOCITY * 16 / 1000;
 	}
 	else
-	if (m_Pos.x >= 600)
+	if (m_Pos.x >= 500)
 	{
 		m_Pos.x -= VELOCITY * 16 / 1000;
 	}
+
 
 
 }
 
 
 
-void MachineGun::updateCollide(SweepAABB col, DWORD deltatime)
+void Bird::updateCollide(SweepAABB col, DWORD deltatime)
 {
 	float colTime = 1.0f;
 
@@ -87,19 +88,11 @@ void MachineGun::updateCollide(SweepAABB col, DWORD deltatime)
 	m_Pos.y += m_bb.m_vy*colTime*deltatime / 1000;
 }
 
-void MachineGun::draw()
+void Bird::draw()
 {
 
-	if (m_Pos.x>0)
-	{
 
-		m_animation->drawCurrentFrame(m_Pos, BOTTOMLEFT, SCALE_A(1), D3DCOLOR_XRGB(255, 255, 255), TRANSLATE_NO, ANGLE_NO, true);
-
-	}
-	else
-	{
-		m_animation->drawCurrentFrame(m_Pos, BOTTOMLEFT, SCALE_XY(-1, 1), D3DCOLOR_XRGB(255, 255, 255), TRANSLATE_NO, ANGLE_NO, true);
-	}
+		m_animation->drawCurrentFrame(m_Pos, BOTTOMLEFT, SCALE_A(1), D3DCOLOR_XRGB(255, 0, 255), TRANSLATE_NO, ANGLE_NO, true);
 	m_animation->generateNextIndexHorizontal(); //tự động tính toán sau bao lâu sẽ tự động đến frame kế tiếp.
 	//m_bb.m_vx = m_bb.m_vy = 0;
 }

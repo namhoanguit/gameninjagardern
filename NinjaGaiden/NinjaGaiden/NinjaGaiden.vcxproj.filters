@@ -159,9 +159,6 @@
     <ClInclude Include="Creese.h">
       <Filter>Header Files\Object\Item</Filter>
     </ClInclude>
-    <ClInclude Include="Whip.h">
-      <Filter>Header Files\Object\Item</Filter>
-    </ClInclude>
     <ClInclude Include="BigFire.h">
       <Filter>Header Files\Object\Ground</Filter>
     </ClInclude>
@@ -203,6 +200,33 @@
     </ClInclude>
     <ClInclude Include="Map.h">
       <Filter>Header Files\Object\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="BanShee.h">
+      <Filter>Header Files\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdRrown.h">
+      <Filter>Header Files\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordMan.h">
+      <Filter>Header Files\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGun.h">
+      <Filter>Header Files\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Whip.h">
+      <Filter>Header Files\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Runner.h">
+      <Filter>Header Files\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Rocket.h">
+      <Filter>Header Files\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Butterfly.h">
+      <Filter>Header Files\Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Bird.h">
+      <Filter>Header Files\Object\Item</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -325,6 +349,30 @@
     </ClCompile>
     <ClCompile Include="Map.cpp">
       <Filter>Source Files\Object\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="BanShee.cpp">
+      <Filter>Source Files\Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdRrown.cpp">
+      <Filter>Source Files\Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordMan.cpp">
+      <Filter>Source Files\Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGun.cpp">
+      <Filter>Source Files\Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Runner.cpp">
+      <Filter>Source Files\Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Rocket.cpp">
+      <Filter>Source Files\Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Bird.cpp">
+      <Filter>Source Files\Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Butterfly.cpp">
+      <Filter>Source Files\Object\Item</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

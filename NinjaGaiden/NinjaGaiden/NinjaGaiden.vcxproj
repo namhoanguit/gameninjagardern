@@ -71,12 +71,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
+    <ClInclude Include="BanShee.h" />
     <ClInclude Include="Bat.h" />
     <ClInclude Include="BigFire.h" />
     <ClInclude Include="BigHeart.h" />
+    <ClInclude Include="Bird.h" />
+    <ClInclude Include="BirdRrown.h" />
     <ClInclude Include="BossBat.h" />
     <ClInclude Include="BoundingBox.h" />
     <ClInclude Include="Brick.h" />
+    <ClInclude Include="Butterfly.h" />
     <ClInclude Include="Collision.h" />
     <ClInclude Include="Creese.h" />
     <ClInclude Include="Death.h" />
@@ -100,25 +104,33 @@
     <ClInclude Include="Gate2.h" />
     <ClInclude Include="IGScene.h" />
     <ClInclude Include="Left.h" />
+    <ClInclude Include="MachineGun.h" />
     <ClInclude Include="MainObject.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="QuadTree.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="Right.h" />
+    <ClInclude Include="Rocket.h" />
+    <ClInclude Include="Runner.h" />
     <ClInclude Include="Simon.h" />
     <ClInclude Include="SmallFire.h" />
     <ClInclude Include="SmallHeart.h" />
     <ClInclude Include="StaticObject.h" />
+    <ClInclude Include="SwordMan.h" />
     <ClInclude Include="Test.h" />
     <ClInclude Include="Whip.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="BanShee.cpp" />
     <ClCompile Include="Bat.cpp" />
     <ClCompile Include="BigFire.cpp" />
     <ClCompile Include="BigHeart.cpp" />
+    <ClCompile Include="Bird.cpp" />
+    <ClCompile Include="BirdRrown.cpp" />
     <ClCompile Include="BossBat.cpp" />
     <ClCompile Include="Brick.cpp" />
+    <ClCompile Include="Butterfly.cpp" />
     <ClCompile Include="Collision.cpp" />
     <ClCompile Include="Creese.cpp" />
     <ClCompile Include="Death.cpp" />
@@ -141,16 +153,20 @@
     <ClCompile Include="Gate2.cpp" />
     <ClCompile Include="IGScene.cpp" />
     <ClCompile Include="Left.cpp" />
+    <ClCompile Include="MachineGun.cpp" />
     <ClCompile Include="mainGame.cpp" />
     <ClCompile Include="MainObject.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="QuadTree.cpp" />
     <ClCompile Include="Resources.cpp" />
     <ClCompile Include="Right.cpp" />
+    <ClCompile Include="Rocket.cpp" />
+    <ClCompile Include="Runner.cpp" />
     <ClCompile Include="Simon.cpp" />
     <ClCompile Include="SmallFire.cpp" />
     <ClCompile Include="SmallHeart.cpp" />
     <ClCompile Include="StaticObject.cpp" />
+    <ClCompile Include="SwordMan.cpp" />
     <ClCompile Include="Test.cpp" />
     <ClCompile Include="Whip.cpp" />
   </ItemGroup>

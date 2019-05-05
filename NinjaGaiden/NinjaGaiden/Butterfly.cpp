@@ -1,20 +1,20 @@
-﻿#include "MachineGun.h"
+﻿#include "Butterfly.h"
 
-#define PATH_MANOBJ "res\\images\\enemy\Gun.bmp"
+#define PATH_MANOBJ "res\\images\\item\\buom.bmp"
 #define VELOCITY 50
 
-MachineGun::MachineGun()
+Butterfly::Butterfly()
 {
 	m_Id = idPLAYER;
-	m_Pos = D3DXVECTOR3(400, 0, 0);
+	m_Pos = D3DXVECTOR3(100, 0, 0);
 
 	m_texture = new fwTexture(PATH_MANOBJ);
-	m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0),5 ,5, 25.2, 32);
+	m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0), 2, 2, 15, 14);
 	m_animation = new fwAnimation(m_sprite, 500);// 500 là thời gian chuyển đổi giữa 2 frame liên tiếp, càng lớn càng chậm
 
 }
 
-MachineGun::~MachineGun()
+Butterfly::~Butterfly()
 {
 	delete m_texture, m_sprite, m_animation;
 	m_texture = nullptr;
@@ -24,21 +24,21 @@ MachineGun::~MachineGun()
 
 
 
-void MachineGun::update(DWORD deltatime)
+void Butterfly::update(DWORD deltatime)
 {
 	//updateKeyBoard(deltatime);
 	updateTime(deltatime);
 }
 
 
-void MachineGun::updateTime(DWORD deltatime)
+void Butterfly::updateTime(DWORD deltatime)
 {
-	if (m_Pos.x >= 400)
+	if (m_Pos.x >= 100)
 	{
 		m_Pos.x += VELOCITY * 16 / 1000;
 	}
 	else
-	if (m_Pos.x >= 600)
+	if (m_Pos.x >= 200)
 	{
 		m_Pos.x -= VELOCITY * 16 / 1000;
 	}
@@ -48,7 +48,7 @@ void MachineGun::updateTime(DWORD deltatime)
 
 
 
-void MachineGun::updateCollide(SweepAABB col, DWORD deltatime)
+void Butterfly::updateCollide(SweepAABB col, DWORD deltatime)
 {
 	float colTime = 1.0f;
 
@@ -87,7 +87,7 @@ void MachineGun::updateCollide(SweepAABB col, DWORD deltatime)
 	m_Pos.y += m_bb.m_vy*colTime*deltatime / 1000;
 }
 
-void MachineGun::draw()
+void Butterfly::draw()
 {
 
 	if (m_Pos.x>0)
