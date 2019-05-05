@@ -67,13 +67,12 @@ void Map::DrawMap(fwCamera* camera, int State)
 		m_animation->drawCurrentFrame(m_Pos, BOTTOMLEFT, SCALE_NO, D3DCOLOR_XRGB(255, 255, 255), TRANSLATE_NO, ANGLE_NO, true);
 		return;
 	}
-	row = -int(camera->getPossition().y) / m_animation->getFrameWidth();
+	row = -int(camera->getPossition().y) / m_animation->getFrameHeight();
 	column = int(camera->getPossition().x) / m_animation->getFrameHeight();
 
 	
-	y = m_Pos.y + RESOLUTION_HEIGHT;
-	x = m_Pos.x;
-	float c = m_Pos.x;
+	x = -(int(camera->getPossition().x) % m_animation->getFrameHeight());
+	y = (int(camera->getPossition().y) % m_animation->getFrameHeight());
 	for (int i = 0; i < ScreenRow; i++)
 	{
 
@@ -93,6 +92,6 @@ void Map::DrawMap(fwCamera* camera, int State)
 		}
 
 		y = y - m_animation->getFrameHeight();
-		x = c;
+		x = -(int(camera->getPossition().x) % m_animation->getFrameHeight());
 	}
 }
