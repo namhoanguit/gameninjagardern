@@ -29,6 +29,10 @@ Hayabusa::Hayabusa(BoundingBox bb, IDObject idobj)
 	m_visibleBB = true;
 
 }
+
+
+
+
 void Hayabusa::draw()
 {
 	//m_visibleBB ? BOUNDINGBOX_DRAW(m_bb, COLOR_RED) : false;
@@ -158,11 +162,7 @@ void Hayabusa::Jump_SM()
 
 	
 	m_animation = Resources::m_animationSimon[_STATE::eJUMP];
-	m_bb.m_vy = m_bb.m_vy * 20;
-	if (m_bb.m_vy >= 300)
-	{
-
-	}
+	m_bb.m_vy = _VJUMP;
 	
 	
 

@@ -22,7 +22,7 @@ IGScene::IGScene()
 	//// Boss
 	//boss_bat = new BossBat();
 	//// item
-	bird = new Bird();	// con chim
+
 	butterfly = new Butterfly();	// con buom
 
 
@@ -40,16 +40,14 @@ IGScene::IGScene()
 
 IGScene::~IGScene()
 {
-	delete hayabusa; box; ball; left;
-	delete dog,bat,death,boss_bat;
-	delete food,bigheart,smallheart;
+	delete hayabusa; box; 
 
 
 	// - ninja gaiden
 	delete banshee,swordman,gun,rocket,runner;
 
 	// item
-	delete butterfly, bird;
+	delete butterfly;
 
 }
 
@@ -133,8 +131,7 @@ void IGScene::update(DWORD deltatime)
 	// item
 
 	butterfly->update(deltatime);
-	bird->update(deltatime);
-	ball->update(deltatime);
+	
 	updateQT();
 
 	updateKeyBoard(deltatime);
@@ -149,7 +146,6 @@ void IGScene::updateKeyBoard(DWORD deltatime)
 	
 	hayabusa->update(deltatime);
 	
-	ball->update(deltatime);
 
 	 
 	if (fwGET_KEY(DIK_V) == KEY_PRESS)
@@ -196,7 +192,7 @@ void IGScene::draw()
 		hayabusa->draw();
 		hayabusa->drawBoundingBox(COLOR_RED);
 	}
-	ball->draw();
+	
 
 
 
@@ -210,10 +206,10 @@ void IGScene::draw()
 
 
 	//item
-	bird->draw();
+	
 	butterfly->draw();
 
-	ball->drawBoundingBox(COLOR_RED);
+	
 }
 
 
@@ -231,7 +227,7 @@ void IGScene::updateScene(DWORD deltatime)
 void IGScene::InitMap()
 {
 	hayabusa = new Hayabusa();
-	ball = new Ball();
+	
 
 	
 	

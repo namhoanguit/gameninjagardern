@@ -23,7 +23,7 @@ public:
 	void updateCollide(SweepAABB, DWORD deltatime = 16);
 
 
-	void draw();
+			void draw();
 };
 
 

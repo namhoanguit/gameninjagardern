@@ -53,7 +53,7 @@ void Map::LoadMap(int State)
 		m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0), 16, 144, 32, 32);
 		m_animation = new fwAnimation(m_sprite, 200);// 500 là thời gian chuyển đổi giữa 2 frame liên tiếp, càng lớn càng chậm
 	 
-	ScreenColumn = (SCREEN_WIDTH) / m_animation->getFrameWidth() + 2;
+	ScreenColumn = (SCREEN_WIDTH) / m_animation->getFrameWidth() + 15;
 	ScreenRow = (SCREEN_HEIGHT) / m_animation->getFrameHeight();
 	//RESOLUTION_WIDTH = (m_sprite->getFrameHeight)*(ColumnMatrix*(State > 0) + (State == 0));//dùng ở hàm SceneMain.cpp
 	//G_MapHeight = (GTTile->FrameHeight)*(RowMatrix*(State > 0) + (State == 0));

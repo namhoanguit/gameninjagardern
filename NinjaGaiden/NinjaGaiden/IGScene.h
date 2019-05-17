@@ -7,26 +7,11 @@
 #include "Hayabusa.h"
 #include "fwCamera.h"
 #include "Dog.h"
-#include "Bat.h"
-#include "Death.h"
+
 #include "BossBat.h"
-#include "Food.h"
-#include "SmallHeart.h"
-#include "BigHeart.h"
-#include "BigFire.h"
-#include "SmallFire.h"
-#include "Creese.h"
-#include "EnergyWater.h"
-#include "Whip.h"
-#include "Door1.h"
-#include "Door2.h"
-#include "Gate1.h"
-#include "Gate2.h"
-#include "Brick.h"
+
 #include "QuadTree.h"
-#include "Ball.h"
-#include "Left.h"
-#include "Right.h"
+
 
 
 
@@ -38,7 +23,7 @@
 #include "Rocket.h"
 
 #include "Butterfly.h"
-#include "Bird.h"
+
 class IGScene
 {
 	Hayabusa* hayabusa;
@@ -48,11 +33,7 @@ class IGScene
 	// Enemy
 	Test * box;
 	
-	Bat *bat;
-	Death * death;
-	Left * left;
 	
-	Ball * ball;
 	// Enemy - ninja garden
 
 	BanShee * banshee;
@@ -68,26 +49,9 @@ class IGScene
 	// Item
 	// nam thêm
 	Butterfly *butterfly;
-	Bird *bird;
-
-
-	Creese * cresse; // item dao gam
-	Whip * whip; // item doi da
-	EnergyWater * energywater;  // item nuoc tang luc
-	Food* food;
-	BigHeart * bigheart;
-	SmallHeart * smallheart;
 	
 
-	// Ground
-	BigFire *bigFire;
-
-	SmallFire * smallfire;
-	Brick *brick;
-	Door1 * door1;
-	Door2 * door2;
-	Gate1 * gate1;
-	Gate2 * gate2;
+	
 	
 	Map* map;
 

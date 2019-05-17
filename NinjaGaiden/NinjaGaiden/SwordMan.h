@@ -22,7 +22,6 @@ public:
 	void updateTime(DWORD deltatime);
 	void updateCollide(SweepAABB, DWORD deltatime = 16);
 
-
 	void draw();
 };
 

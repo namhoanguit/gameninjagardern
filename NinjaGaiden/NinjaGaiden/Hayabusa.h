@@ -1,8 +1,8 @@
-#ifndef _TERRAIN_H_
+﻿#ifndef _TERRAIN_H_
 #define _TERRAIN_H_
 
 #include "MainObject.h"
-
+#define _VJUMP 12
 
 enum _STATE
 {
@@ -24,17 +24,21 @@ class Hayabusa :public DynamicObject
 	fwSprite* m_sprite;
 	bool isleft;
 
+
+
 public:
 	Hayabusa();
 	~Hayabusa();
 	Hayabusa(BoundingBox, IDObject = idPLATFORM);
-	void draw();
-	void Jump_SM();
-	void Sit_SM();
-	void Go_SM();
-	void Stand_SM();
-	void Attacking();
-	void Sit_Attacking();
+	virtual	void draw();
+		void Jump_SM();
+		void Sit_SM();
+		void Go_SM();
+		void Stand_SM();
+		void Fall();
+		void Attacking();
+		void Sit_Attacking();
+		void Stop();
 	bool GetCam();
 	void update(DWORD deltatime);
 	void updateCollide(SweepAABB, DWORD deltatime = 16);

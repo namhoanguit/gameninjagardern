@@ -135,73 +135,13 @@
     <ClInclude Include="StaticObject.h">
       <Filter>Header Files\Object</Filter>
     </ClInclude>
-    <ClInclude Include="Bat.h">
-      <Filter>Header Files\Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Death.h">
-      <Filter>Header Files\Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Dog.h">
-      <Filter>Header Files\Object\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="BossBat.h">
       <Filter>Header Files\Object\Boss</Filter>
-    </ClInclude>
-    <ClInclude Include="BigHeart.h">
-      <Filter>Header Files\Object\Item</Filter>
-    </ClInclude>
-    <ClInclude Include="SmallHeart.h">
-      <Filter>Header Files\Object\Item</Filter>
-    </ClInclude>
-    <ClInclude Include="Food.h">
-      <Filter>Header Files\Object\Item</Filter>
-    </ClInclude>
-    <ClInclude Include="Creese.h">
-      <Filter>Header Files\Object\Item</Filter>
-    </ClInclude>
-    <ClInclude Include="BigFire.h">
-      <Filter>Header Files\Object\Ground</Filter>
-    </ClInclude>
-    <ClInclude Include="SmallFire.h">
-      <Filter>Header Files\Object\Ground</Filter>
-    </ClInclude>
-    <ClInclude Include="Door1.h">
-      <Filter>Header Files\Object\Ground</Filter>
-    </ClInclude>
-    <ClInclude Include="Door2.h">
-      <Filter>Header Files\Object\Ground</Filter>
-    </ClInclude>
-    <ClInclude Include="Gate1.h">
-      <Filter>Header Files\Object\Ground</Filter>
-    </ClInclude>
-    <ClInclude Include="Gate2.h">
-      <Filter>Header Files\Object\Ground</Filter>
-    </ClInclude>
-    <ClInclude Include="EnergyWater.h">
-      <Filter>Header Files\Object\Item</Filter>
-    </ClInclude>
-    <ClInclude Include="Brick.h">
-      <Filter>Header Files\Object\Ground</Filter>
     </ClInclude>
     <ClInclude Include="QuadTree.h">
       <Filter>Header Files\QuadTree</Filter>
     </ClInclude>
-    <ClInclude Include="Left.h">
-      <Filter>Header Files\Object\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Right.h">
-      <Filter>Header Files\Object\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Ball.h">
-      <Filter>Header Files\Object\Item</Filter>
-    </ClInclude>
-    <ClInclude Include="Map.h">
-      <Filter>Header Files\Object\Ground</Filter>
-    </ClInclude>
     <ClInclude Include="BanShee.h">
-      <Filter>Header Files\Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="BirdRrown.h">
       <Filter>Header Files\Object\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="SwordMan.h">
@@ -209,9 +149,6 @@
     </ClInclude>
     <ClInclude Include="MachineGun.h">
       <Filter>Header Files\Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Whip.h">
-      <Filter>Header Files\Object\Player</Filter>
     </ClInclude>
     <ClInclude Include="Runner.h">
       <Filter>Header Files\Object\Enemy</Filter>
@@ -222,11 +159,14 @@
     <ClInclude Include="Butterfly.h">
       <Filter>Header Files\Object\Item</Filter>
     </ClInclude>
-    <ClInclude Include="Bird.h">
-      <Filter>Header Files\Object\Item</Filter>
-    </ClInclude>
     <ClInclude Include="Hayabusa.h">
       <Filter>Header Files\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files\Object\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Dog.h">
+      <Filter>Header Files\Object\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -281,76 +221,19 @@
     <ClCompile Include="Test.cpp">
       <Filter>Source Files\Object</Filter>
     </ClCompile>
-    <ClCompile Include="Bat.cpp">
-      <Filter>Source Files\Object\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Death.cpp">
-      <Filter>Source Files\Object\Enemy</Filter>
-    </ClCompile>
     <ClCompile Include="Dog.cpp">
       <Filter>Source Files\Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="BossBat.cpp">
       <Filter>Source Files\Object\Boss</Filter>
     </ClCompile>
-    <ClCompile Include="BigHeart.cpp">
-      <Filter>Source Files\Object\Item</Filter>
-    </ClCompile>
-    <ClCompile Include="SmallHeart.cpp">
-      <Filter>Source Files\Object\Item</Filter>
-    </ClCompile>
-    <ClCompile Include="Food.cpp">
-      <Filter>Source Files\Object\Item</Filter>
-    </ClCompile>
-    <ClCompile Include="BigFire.cpp">
-      <Filter>Source Files\Object\Ground</Filter>
-    </ClCompile>
-    <ClCompile Include="SmallFire.cpp">
-      <Filter>Source Files\Object\Ground</Filter>
-    </ClCompile>
-    <ClCompile Include="Door1.cpp">
-      <Filter>Source Files\Object\Ground</Filter>
-    </ClCompile>
-    <ClCompile Include="Gate1.cpp">
-      <Filter>Source Files\Object\Ground</Filter>
-    </ClCompile>
-    <ClCompile Include="Gate2.cpp">
-      <Filter>Source Files\Object\Ground</Filter>
-    </ClCompile>
-    <ClCompile Include="EnergyWater.cpp">
-      <Filter>Source Files\Object\Item</Filter>
-    </ClCompile>
-    <ClCompile Include="Whip.cpp">
-      <Filter>Source Files\Object\Item</Filter>
-    </ClCompile>
-    <ClCompile Include="Creese.cpp">
-      <Filter>Source Files\Object\Item</Filter>
-    </ClCompile>
-    <ClCompile Include="Brick.cpp">
-      <Filter>Source Files\Object\Ground</Filter>
-    </ClCompile>
-    <ClCompile Include="Door2.cpp">
-      <Filter>Source Files\Object\Ground</Filter>
-    </ClCompile>
     <ClCompile Include="QuadTree.cpp">
       <Filter>Source Files\QuadTree</Filter>
-    </ClCompile>
-    <ClCompile Include="Left.cpp">
-      <Filter>Source Files\Object\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="Right.cpp">
-      <Filter>Source Files\Object\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="Ball.cpp">
-      <Filter>Source Files\Object\Item</Filter>
     </ClCompile>
     <ClCompile Include="Map.cpp">
       <Filter>Source Files\Object\Ground</Filter>
     </ClCompile>
     <ClCompile Include="BanShee.cpp">
-      <Filter>Source Files\Object\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="BirdRrown.cpp">
       <Filter>Source Files\Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="SwordMan.cpp">
@@ -365,14 +248,14 @@
     <ClCompile Include="Rocket.cpp">
       <Filter>Source Files\Object\Enemy</Filter>
     </ClCompile>
-    <ClCompile Include="Bird.cpp">
-      <Filter>Source Files\Object\Item</Filter>
-    </ClCompile>
     <ClCompile Include="Butterfly.cpp">
       <Filter>Source Files\Object\Item</Filter>
     </ClCompile>
     <ClCompile Include="Hayabusa.cpp">
       <Filter>Source Files\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdRrown.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
