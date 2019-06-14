@@ -5,10 +5,6 @@ IGScene::IGScene()
 	//m_mainobj = new MainObject();
 	//box = new Test(BoundingBox(0, 10, 500, 5));
 
-
-
-	
-
 		//// enemy
 	banshee = new BanShee();
 	dog = new  Dog();
@@ -24,17 +20,7 @@ IGScene::IGScene()
 	//// item
 
 	butterfly = new Butterfly();	// con buom
-
-
-
-
 	InitMap();
-
-
-
-
-
-
 
 }
 
@@ -50,9 +36,10 @@ IGScene::~IGScene()
 	delete butterfly;
 
 }
-
+ 
 void IGScene::update(DWORD deltatime)
 {
+	updateQT();
 	//m_mainobj->update(deltatime);
 
 	//bat->update(deltatime);*/
@@ -132,7 +119,6 @@ void IGScene::update(DWORD deltatime)
 
 	butterfly->update(deltatime);
 	
-	updateQT();
 
 	updateKeyBoard(deltatime);
 
@@ -176,13 +162,14 @@ void IGScene::updateCollide(DWORD deltatime)
 }
 void IGScene::draw()
 {
-	map->DrawMap(fwCAMERA_INSTANCE, 1);
+	
 	
 	if (m_visibleScene)
 	{
-		
+		map->DrawMap(fwCAMERA_INSTANCE, 1);
 		//m_sceneMap->drawFrame(m_posCamera);
 		hayabusa->draw();
+		
 	}
 	else
 	{
@@ -216,12 +203,12 @@ void IGScene::draw()
 
 void IGScene::updateScene(DWORD deltatime)
 {
+
 	if (hayabusa->GetCam() == true)
 		m_posCamera.x += hayabusa->getVX()*deltatime / 1000;
 	//m_posCamera.y += m_mainobj->getVY()*deltatime / 1000;
 	fwCAMERA_INSTANCE->setPossition(m_posCamera);
-	m_sceneMap->setPosInTexture(D3DXVECTOR3(m_posCamera.x,
-		m_sizeQT - m_posCamera.y - RESOLUTION_HEIGHT, 0));
+	 
 }
 
 void IGScene::InitMap()
@@ -245,14 +232,10 @@ void IGScene::InitMap()
 	m_sizeQT = m_qt->getSizeNodeTree();
 
 
-	
-	m_sceneMap = new fwSprite(new fwTexture(PATH_MAP));
-	m_sceneMap->setSizeFrame(RESOLUTION_WIDTH, RESOLUTION_HEIGHT);
-	m_sceneMap->setPosInTexture(D3DXVECTOR3(0, 0, 0));
-
+ 
 
 	m_posCamera.x =0;
-	m_posCamera.y = -200;
+	m_posCamera.y = 0;
 	fwCAMERA_INSTANCE->setPossition(m_posCamera);
 	if (hayabusa->GetCam() == true)
 		hayabusa->setPosition(D3DXVECTOR3(fwCAMERA_INSTANCE->getPossition().x + RESOLUTION_WIDTH / 2
@@ -263,8 +246,6 @@ void IGScene::InitMap()
 void IGScene::updateQT()
 {
 	m_main.clear();
-
-
 	m_qt->extractIntoVectorEntitiesByRegion(fwCAMERA_INSTANCE->getBoundingBox(),
 		&m_main);
 }

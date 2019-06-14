@@ -2,7 +2,7 @@
 
 #define PATH_SIMON "res\\images\\ninja.png"
 #define VELOCITY 100
-#define SIMON_VJUMP 400
+#define SIMON_VJUMP 300
 
 Hayabusa::Hayabusa()
 {
@@ -55,7 +55,7 @@ void Hayabusa::update(DWORD deltatime)
 		Stand_SM();
 	}
 
-	if (fwGET_KEY(DIK_W) == KEY_DOWN || fwGET_KEY(DIK_W) == KEY_PRESS)
+	if (fwGET_KEY(DIK_SPACE) == KEY_DOWN || fwGET_KEY(DIK_SPACE) == KEY_PRESS)
 	{
 		Jump_SM();
 
@@ -162,7 +162,7 @@ void Hayabusa::Jump_SM()
 
 	
 	m_animation = Resources::m_animationSimon[_STATE::eJUMP];
-	m_bb.m_vy = _VJUMP;
+	m_bb.m_vy = SIMON_VJUMP;
 	
 	
 
@@ -206,7 +206,7 @@ void Hayabusa::Stand_SM()
 		m_bb.m_vx = 0;
 		//m_bb.m_vy = -300;
 	}
-
+	m_bb.m_vy = -VELOCITY;
 }
 
 // nam them

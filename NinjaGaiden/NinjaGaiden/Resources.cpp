@@ -19,6 +19,9 @@ Resources::Resources()
 	m_spriteSimon[_STATE::eSTAND] = new fwSprite(m_txtSimon, D3DXVECTOR3(0, 0, 0),1, 1, 17, 32);
 	m_spriteSimon[_STATE::eSIT] = new fwSprite(m_txtSimon, D3DXVECTOR3(0, 47, 0), 1, 1, 31.5, 24);
 	m_spriteSimon[_STATE::eRUN] = new fwSprite(m_txtSimon, D3DXVECTOR3(336, 0, 0), 3, 3, 27, 31);
+
+
+
 	m_spriteSimon[_STATE::eJUMP] = new fwSprite(m_txtSimon, D3DXVECTOR3(135, 47, 0), 4, 4, 25, 22);
 
 	// nam thêm 
@@ -29,7 +32,7 @@ Resources::Resources()
 	m_animationSimon[_STATE::eSTAND] = new fwAnimation(m_spriteSimon[_STATE::eSTAND], 200);
 	m_animationSimon[_STATE::eSIT] = new fwAnimation(m_spriteSimon[_STATE::eSIT], 200);
 	m_animationSimon[_STATE::eRUN] = new fwAnimation(m_spriteSimon[_STATE::eRUN], 100);
-	m_animationSimon[_STATE::eJUMP] = new fwAnimation(m_spriteSimon[_STATE::eJUMP], 200);
+	m_animationSimon[_STATE::eJUMP] = new fwAnimation(m_spriteSimon[_STATE::eJUMP], 500);
 
 	// nam thêm
 	m_animationSimon[_STATE::eAttacking] = new fwAnimation(m_spriteSimon[_STATE::eAttacking], 500);

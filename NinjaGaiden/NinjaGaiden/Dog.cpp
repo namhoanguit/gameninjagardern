@@ -6,7 +6,7 @@
 Dog::Dog()
 {
 	m_Id = idPLAYER;
-	m_Pos = D3DXVECTOR3(200, 0, 0);
+	m_Pos = D3DXVECTOR3(32, 130, 0);
 
 	m_texture = new fwTexture(PATH_MANOBJ);
 	m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0), 2, 2, 32.5, 15);

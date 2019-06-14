@@ -50,10 +50,10 @@ void Map::LoadMap(int State)
 	 
 		ReadMap("res/images/stage1.txt", State);
 		m_texture = new fwTexture(PATH_MAP1, D3DCOLOR_XRGB(255, 0, 255));
-		m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0), 16, 144, 32, 32);
+		m_sprite = new fwSprite(m_texture, D3DXVECTOR3(0, 0, 0), 26, 364, 16, 16);
 		m_animation = new fwAnimation(m_sprite, 200);// 500 là thời gian chuyển đổi giữa 2 frame liên tiếp, càng lớn càng chậm
 	 
-	ScreenColumn = (SCREEN_WIDTH) / m_animation->getFrameWidth() + 15;
+	ScreenColumn = (SCREEN_WIDTH) / m_animation->getFrameWidth()+30;
 	ScreenRow = (SCREEN_HEIGHT) / m_animation->getFrameHeight();
 	//RESOLUTION_WIDTH = (m_sprite->getFrameHeight)*(ColumnMatrix*(State > 0) + (State == 0));//dùng ở hàm SceneMain.cpp
 	//G_MapHeight = (GTTile->FrameHeight)*(RowMatrix*(State > 0) + (State == 0));
@@ -69,11 +69,13 @@ void Map::DrawMap(fwCamera* camera, int State)
 	}
 	row = -int(camera->getPossition().y) / m_animation->getFrameHeight();
 	column = int(camera->getPossition().x) / m_animation->getFrameHeight();
-
 	
-	x = -(int(camera->getPossition().x) % m_animation->getFrameHeight());
+	
+	x = -(int(camera->getPossition().x) % m_animation->getFrameHeight()) ;
 	y = (int(camera->getPossition().y) % m_animation->getFrameHeight());
-	for (int i = 0; i < ScreenRow; i++)
+	y = RowMatrix *m_animation->getFrameHeight();
+	row = 13;
+	/*for (int i = 0; i < ScreenRow; i++)
 	{
 
 		for (int j = 0; j < ScreenColumn; j++)
@@ -93,5 +95,28 @@ void Map::DrawMap(fwCamera* camera, int State)
 
 		y = y - m_animation->getFrameHeight();
 		x = -(int(camera->getPossition().x) % m_animation->getFrameHeight());
+	}*/
+	ScreenRow = 13;
+	ScreenColumn = 160;
+	x = 0;
+	for (int i = 0; i < ScreenRow; i++)
+	{
+
+		for (int j = 0; j < ScreenColumn; j++)
+		{
+			 
+				m_Pos.x = x;
+				m_Pos.y = y;
+				int a = TileMap[i][j];
+
+				m_animation->setCurrentIndex(TileMap[i][j]);
+				m_animation->drawCurrentFrame(m_Pos);
+				x = x + m_animation->getFrameHeight();
+			 
+
+		}
+
+		y = y - m_animation->getFrameHeight();
+		x = 0;
 	}
 }

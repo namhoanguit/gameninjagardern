@@ -17,8 +17,8 @@ class Map
 private:
 
 	int RowMatrix = 0;
-	int ColumnMatrix = 80;
-	int TileMap[6][80];
+	int ColumnMatrix = 160;
+	int TileMap[13][160];
 	
 	//int State = 1; //-1: Menu ; 0: Intro, 1: Màn 1, 2: Màn 2, 3: Màn 3
 

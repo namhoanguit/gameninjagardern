@@ -158,7 +158,6 @@ void QuadTree::readfile(const char* filename, eTypeQuadTree typequadtree)
 		node = nullptr;
 		fscanf(file, "\n");
 	}
-
 	m_vectorEntitiesTerrain;
 
 	//Close File
@@ -234,10 +233,11 @@ bool QuadTree::isContain(StaticObject& entity)
 
 bool QuadTree::isContain(BoundingBox& bb)
 {
-	return !(bb.m_pos.x + bb.m_width < m_region.m_pos.x ||
+	bool a = !(bb.m_pos.x + bb.m_width < m_region.m_pos.x ||
 		bb.m_pos.y + bb.m_height < m_region.m_pos.y ||
 		bb.m_pos.x > m_region.m_pos.x + m_region.m_width ||
 		bb.m_pos.y > m_region.m_pos.y + m_region.m_height);
+	return a;
 }
 
 //Name: compareRegion

@@ -35,15 +35,12 @@ D3DXMATRIX fwCamera::gettransformCoordinates()
 
 void fwCamera::update(DWORD deltatime)
 {
-	m_bb.m_pos.x = m_CurrPositionDescartes.x - RESOLUTION_WIDTH;
-	//m_bb.m_pos.y = m_CurrPosition.y - RESOLUTION_HEIGHT;
-	m_bb.m_pos.y = ((int)(m_CurrPositionDescartes.y / RESOLUTION_HEIGHT) - 1)*RESOLUTION_HEIGHT +
-		(RESOLUTION_HEIGHT - ((int)m_CurrPositionDescartes.y) % RESOLUTION_HEIGHT - m_bb.m_height);
-	//m_bb.m_pos.y = 560 - m_bb.m_pos.y;
-	/*m_bb.m_pos.y = RESOLUTION_HEIGHT*((int)(((int)m_CurrPosition.y) / RESOLUTION_HEIGHT) + 1) -
-		(int)m_CurrPosition.y - (int)m_bb.m_height + (int)(((int)m_CurrPosition.y) / RESOLUTION_HEIGHT);*/
-
-	//m_bb.m_pos.x = m_CurrPositionDescartes.x;
-	//m_bb.m_pos.y = m_CurrPositionDescartes.y;
+	//m_bb.m_pos.x = m_CurrPositionDescartes.x - RESOLUTION_WIDTH;
+	 
+	//m_bb.m_pos.y = ((int)(m_CurrPositionDescartes.y / RESOLUTION_HEIGHT) - 1)*RESOLUTION_HEIGHT +
+	//	(RESOLUTION_HEIGHT - ((int)m_CurrPositionDescartes.y) % RESOLUTION_HEIGHT - m_bb.m_height);
+	 
+	m_bb.m_pos.x = m_CurrPositionDescartes.x;
+	m_bb.m_pos.y = m_CurrPositionDescartes.y;
 }
 
